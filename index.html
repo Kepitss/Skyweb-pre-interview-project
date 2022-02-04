@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>SkyWeb iterview project</title>
+
+		<!-- Google fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Questrial&display=swap"
+			rel="stylesheet"
+		/>
+
+		<!-- Font awsome -->
+		<link
+			rel="stylesheet"
+			href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+			integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+			crossorigin="anonymous"
+		/>
+
+		<!-- Styles -->
+		<link rel="stylesheet" href="./styles/css/main.css" />
+	</head>
+	<body>
+		<!-- NAVIGATION BAR -->
+		<div class="navbar-container">
+			<!-- Sign in / Join -->
+			<div class="navbar-row-1">
+				<a href="#">Sign in</a>
+				<span>I</span>
+				<a href="#">Join</a>
+			</div>
+
+			<!-- Links, Logo, Shopping cart -->
+			<div class="navbar-row-2">
+				<a class="navbar-ham-icon" id="open-links"
+					><img src="./assets/logos/ham-icon.png" alt=""
+				/></a>
+
+				<!-- Links, Logo wrapper -->
+				<div class="navbar-links-wrapper">
+					<a href="#" class="navbar-logo">
+						<img
+							src="./assets/logos/skyweb-logo.png"
+							alt="Skyweb logo in yellow and orange colors"
+						/>
+					</a>
+
+					<ul class="navbar-links">
+						<li><a class="navbar-link" href="#">Shop</a></li>
+						<li><a class="navbar-link" href="#">Learn</a></li>
+						<li><a class="navbar-link" href="#">Fit</a></li>
+						<li><a class="navbar-link" href="#">Inspire</a></li>
+						<li><a class="navbar-link" href="#">Connect</a></li>
+					</ul>
+				</div>
+
+				<a href="#" class="navbar-shop-cart">
+					<img src="./assets/logos/bag.png" alt="Shopping cart bag" />
+				</a>
+			</div>
+		</div>
+
+		<!-- PRODUCT CONTAINER -->
+		<div class="product-container">
+			<!-- Product image side -->
+			<div class="product-img">
+				<img
+					src="./assets/images/t-shirt.png"
+					alt="White t-shirt with collar and transparent buttons"
+				/>
+			</div>
+
+			<!-- Product info side -->
+			<div class="product-info">
+				<h2 class="product-title">Palermo - White Twill 100s Dress Shirt</h2>
+				<p class="product-price">$90</p>
+
+				<!-- Short info about product -->
+				<ul class="product-short-info">
+					<li>
+						<img src="./assets/logos/fit-icon.png" />
+						<span>Guaranteed fit</span>
+					</li>
+					<li>
+						<img src="./assets/logos/sizors.png" />
+						<span>100% hand cut & sewn</span>
+					</li>
+					<li>
+						<img src="./assets/logos/box.png" /><span>Delivery between <b>Jan 19 - Jan 22</b></span>
+					</li>
+				</ul>
+
+				<!-- Add to cart button -->
+				<button class="product-add-cart-btn">Add to cart</button>
+
+				<!-- Long info about info accordion -->
+				<div class="product-info-accordion">
+					<!-- Accordion Item 1 -->
+					<div class="accordion-item item-1">
+						<div class="accordion-title">
+							<h4>About this Blend</h4>
+							<i class="fas fa-angle-down closed"></i>
+							<i class="fas fa-angle-up opened"></i>
+						</div>
+						<div class="accordion-content">
+							<p>
+								Indian Assam. Sri Lankan Ceylon. We always buy the most recent harvest here at Tea
+								HQ for the freshest tea. It's got a 2 year shelf life once it gets to you - but
+								don't worry, you'll have drunk it by then.
+							</p>
+						</div>
+					</div>
+					<!-- Accordion Item 2 -->
+					<div class="accordion-item item-1">
+						<div class="accordion-title">
+							<h4>Tasting Notes</h4>
+							<i class="fas fa-angle-down closed"></i>
+							<i class="fas fa-angle-up opened"></i>
+						</div>
+						<div class="accordion-content">
+							<p>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni sint laudantium, est
+								quas, minus cupiditate blanditiis optio, exercitationem ipsum provident inventore
+								officiis cumque vero! Earum.
+							</p>
+						</div>
+					</div>
+					<!-- Accordion Item 3 -->
+					<div class="accordion-item item-1">
+						<div class="accordion-title">
+							<h4>Shipping</h4>
+							<i class="fas fa-angle-down closed"></i>
+							<i class="fas fa-angle-up opened"></i>
+						</div>
+						<div class="accordion-content">
+							<p>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam eum repellendus
+								possimus corporis minus commodi dolore nisi. Ut repudiandae, soluta reprehenderit
+								delectus animi labore! Tempora porro quam velit aut molestiae alias, dignissimos
+								quod cum commodi?
+							</p>
+						</div>
+					</div>
+					<!-- Accordion Item 4 -->
+					<div class="accordion-item item-1">
+						<div class="accordion-title">
+							<h4>Compost your packaging</h4>
+							<i class="fas fa-angle-down closed"></i>
+							<i class="fas fa-angle-up opened"></i>
+						</div>
+						<div class="accordion-content">
+							<p>
+								Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum sed ducimus ut, est
+								iusto quas quibusdam tempore architecto rem dignissimos quisquam dolores sequi iste
+								perferendis?
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Javascript -->
+		<script src="./js/navbar.js"></script>
+		<script src="./js/accordion.js"></script>
+	</body>
+</html>

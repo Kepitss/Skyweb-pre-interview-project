@@ -1,0 +1,251 @@
+@use "../helpers/index" as *;
+
+.product-container {
+	width: 100%;
+	margin: 0 auto;
+	padding-top: 5rem;
+
+	// PRODUCT IMAGE SIDE
+	.product-img {
+		@include display-flex(unset, center, unset);
+
+		img {
+			width: 60%;
+			max-width: 25rem;
+		}
+	}
+
+	// PRODUCT INFO SIDE
+	.product-info {
+		.product-title {
+			@include font-family-montserrat(unset, 1.5em, 300);
+			width: 80%;
+			text-align: center;
+			margin: 0 auto;
+			font-style: italic;
+			font-size: 1.6rem;
+			color: $text-medium-grey;
+		}
+	}
+
+	.product-price {
+		@include font-family-questrial(unset, 1em);
+		text-align: center;
+		color: $text-light-grey;
+		font-size: 1.6rem;
+	}
+
+	// Short info about product
+	.product-short-info {
+		list-style: none;
+		width: 90%;
+		margin: 0 auto;
+		padding: 2.5em 0;
+
+		li {
+			@include display-flex(row, left, center);
+			margin-top: 0.5em;
+
+			span {
+				@include font-family-montserrat(unset, 1em, 100);
+				text-transform: uppercase;
+				font-size: 0.8rem;
+				margin-left: 1em;
+				color: $text-light-grey;
+				font-size: 0.8rem;
+
+				b {
+					color: $text-medium-grey;
+				}
+			}
+		}
+	}
+
+	// Add to cart button
+	.product-add-cart-btn {
+		@include font-family-montserrat(0.1em, 1em, 700);
+		text-transform: uppercase;
+		outline: none;
+		border: none;
+		border-radius: 0.3em;
+		background-color: $cont-dark-blue;
+		color: $text-clean-white;
+		font-size: 1rem;
+		padding: 1em 0;
+		cursor: pointer;
+		width: 90%;
+		margin-left: 5%;
+		transition: 0.1s ease-in-out;
+
+		&:hover {
+			background-color: $cont-medium-orange;
+		}
+
+		&:active {
+			background-color: $cont-clean-black;
+		}
+	}
+
+	// Long info accordion
+	.product-info-accordion {
+		width: 90%;
+		margin-top: 3rem;
+		margin-left: 5%;
+		margin-bottom: 5rem;
+		.accordion-item {
+			margin-top: 0.5rem;
+			// title
+			.accordion-title {
+				@include display-flex(row, space-between, center);
+				border-bottom: 0.25rem solid $cont-light-grey;
+				padding: 0.5em 1em 0.5em 0.1em;
+				cursor: pointer;
+
+				h4 {
+					@include font-family-montserrat(unset, 1em, 700);
+					text-transform: uppercase;
+					color: $text-clean-black;
+				}
+
+				.opened {
+					display: none;
+				}
+			}
+
+			// content
+			.accordion-content {
+				max-height: 0;
+				overflow: hidden;
+				transition: 0.5s;
+
+				p {
+					@include font-family-questrial(unset, 1em);
+					padding: 0.5em;
+				}
+			}
+		}
+
+		.accordion-item.active {
+			.accordion-title {
+				border-bottom: 0.25rem solid $cont-medium-orange;
+
+				.closed {
+					display: none;
+				}
+
+				.opened {
+					display: inline-block;
+				}
+			}
+
+			.accordion-content {
+				max-height: 15rem;
+			}
+		}
+	}
+}
+
+// On touchscreens
+@media (hover: none) {
+	.product-container {
+		// PRODUCT INFO SIDE
+		.product-info {
+			// Add to cart button
+			.product-add-cart-btn {
+				&:hover {
+					background-color: $cont-dark-blue;
+				}
+			}
+		}
+	}
+}
+
+// 900px
+@media (min-width: 56.25rem) {
+	.product-container {
+		@include display-flex(unset, center, center);
+		padding: 0;
+		height: 100vh;
+
+		// PRODUCT IMAGE SIDE
+		.product-img {
+			position: relative;
+			width: 54.5%;
+			height: 100%;
+			padding-top: 5rem;
+
+			img {
+				position: absolute;
+			}
+		}
+
+		// PRODUCT INFO SIDE
+		.product-info {
+			padding-top: 7rem;
+			width: 45.5%;
+			height: 100%;
+
+			.product-title {
+				width: 60%;
+				margin: 0 1.275625em;
+				text-align: left;
+			}
+
+			.product-price {
+				text-align: left;
+				margin: 0.5em 1.275625em;
+			}
+
+			// Long info accordion
+			.product-info-accordion {
+				width: 78%;
+				margin-top: 2rem;
+
+				.accordion-item {
+					// title
+					.accordion-title {
+						font-size: 1.2rem;
+					}
+
+					// content
+					.accordion-content {
+						padding: 0.5em 0.1em;
+
+						p {
+							font-size: 1.2rem;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+// 1280px
+@media (min-width: 100rem) {
+	.product-container {
+		width: 80%;
+
+		// PRODUCT INFO SIDE
+		.product-info {
+			// Long info accordion
+			.product-info-accordion {
+				.accordion-item {
+					// title
+					.accordion-title {
+						font-size: 1rem;
+					}
+
+					// content
+					.accordion-content {
+						padding: 0.5em 0.1em;
+
+						p {
+							font-size: 1rem;
+						}
+					}
+				}
+			}
+		}
+	}
+}

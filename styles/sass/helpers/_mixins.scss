@@ -1,0 +1,24 @@
+// TYPOGRAPHY MIXINS
+// Add font Questrial
+@mixin font-family-questrial($letter-spacing, $line-height) {
+	font-family: "Questrial", sans-serif;
+	letter-spacing: $letter-spacing;
+	line-height: $line-height;
+}
+
+// Add font Montserrat
+@mixin font-family-montserrat($letter-spacing, $line-height, $font-weight) {
+	font-family: "Montserrat", sans-serif;
+	letter-spacing: $letter-spacing;
+	line-height: $line-height;
+	font-weight: $font-weight;
+}
+
+// POSITION MIXINS
+// Display flex
+@mixin display-flex($flex-direction, $justify-content, $align-items) {
+	display: flex;
+	flex-direction: $flex-direction;
+	justify-content: $justify-content;
+	align-items: $align-items;
+}
