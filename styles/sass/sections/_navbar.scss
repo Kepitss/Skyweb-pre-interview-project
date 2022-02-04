@@ -1,0 +1,164 @@
+@use "../helpers/index" as *;
+
+.navbar-container {
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10;
+
+	// Navigation bar row 1
+	.navbar-row-1 {
+		width: 100%;
+		background-color: $cont-clean-black;
+		text-align: right;
+		padding: 0.1em 1.2em;
+
+		a {
+			@include font-family-questrial(0.1em, 1em);
+			text-transform: uppercase;
+			text-decoration: none;
+			color: $text-clean-white;
+			font-size: 0.8rem;
+		}
+
+		span {
+			@include font-family-montserrat(0.1em, 1em, lighter);
+			color: $text-clean-white;
+			font-size: 0.8rem;
+			margin: 0 0.3em;
+		}
+	}
+
+	// Navigation bar row 2
+	.navbar-row-2 {
+		@include display-flex(row, space-between, center);
+		padding: 0.5em 0.9em;
+		background-color: $cont-clean-white;
+		border-bottom: 0.125em solid $cont-light-grey;
+
+		// Hamburger icon
+		.navbar-ham-icon {
+			color: $text-medium-grey;
+			z-index: 2;
+			cursor: pointer;
+			user-select: none;
+
+			i {
+				font-size: 1.5rem;
+			}
+		}
+
+		// Navbar links wrapper
+		.navbar-links-wrapper {
+			@include display-flex(row, unset, center);
+
+			// Navigation bar logo
+			.navbar-logo {
+				img {
+					width: 11rem;
+					user-select: none;
+				}
+			}
+
+			// Navigation bar links
+			.navbar-links {
+				@include display-flex(column, center, center);
+				position: fixed;
+				top: 0;
+				left: -100%;
+				width: 100vw;
+				height: 100vh;
+				text-align: left;
+				background-color: $cont-clean-white;
+				list-style: none;
+				transition: left 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+
+				li {
+					a {
+						@include font-family-montserrat(0.1em, 1.5em, 500);
+						color: $text-medium-grey;
+						text-decoration: none;
+						text-transform: uppercase;
+						font-size: 1.2rem;
+						margin-top: 5em;
+						transition: 0.3s ease-in-out;
+
+						&:hover {
+							color: $text-clean-black;
+						}
+					}
+				}
+			}
+
+			// Classes for navbar functionality on mobile
+			.navbar-links-active {
+				left: 0;
+			}
+		}
+
+		// Navigation bar shopping cart
+		.navbar-shop-cart {
+			img {
+				width: 1.3rem;
+				user-select: none;
+			}
+		}
+	}
+}
+
+// 400px
+@media (min-width: 25rem) {
+	.navbar-container {
+		.navbar-row-2 {
+			.navbar-links-wrapper {
+				// Navigation bar links
+				.navbar-links {
+					width: 50vw;
+				}
+			}
+		}
+	}
+}
+
+// 900px
+@media (min-width: 56.25rem) {
+	.navbar-container {
+		// Navigation bar row 1
+		.navbar-row-1 {
+			padding: 0.2em 3.5em;
+		}
+
+		// Navigation bar row 2
+		.navbar-row-2 {
+			padding: 0.5em unset;
+			padding-right: 4em;
+			padding-left: 1.5em;
+
+			// Hamburger icon
+			.navbar-ham-icon {
+				display: none;
+			}
+
+			.navbar-links-wrapper {
+				// Navigation bar links
+				.navbar-links {
+					position: unset;
+					width: unset;
+					height: unset;
+					flex-direction: row;
+					justify-content: unset;
+					align-items: center;
+					background-color: transparent;
+					align-items: center;
+					margin-left: 0.3em;
+
+					li a {
+						margin-left: 1.5em;
+						font-size: 1rem;
+					}
+				}
+			}
+		}
+	}
+}
